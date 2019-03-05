@@ -37,15 +37,23 @@ The performance of the following CNNs are evaluated toward the task of detecting
 
 The overall process is described herewith: 
 
-(a) Model A: The custom and pretrained models, otherwise called the base models, are trained on datasets including RSNA pneumonia, pediatric pneumonia, and Indiana collections, to learn the CXR domain-specific features and classify them into abnormal and normal categories. We randomly selected 10% of the training data toward validation. Callbacks and model checkpoints are used to investigate the performance of the models after each epoch. Learning rate is reduced whenever the validation accuracy ceased to improve. The retrained models with the best test classification accuracy are stored for further evaluation.
+(a) Model A: The custom and pretrained models, otherwise called the base models, are trained on datasets including RSNA pneumonia, pediatric pneumonia, and Indiana collections, to learn the CXR domain-specific features and classify them into abnormal and normal categories. We randomly selected 10% of the training data toward validation. Callbacks and model checkpoints are used to investigate the performance of the models after each epoch. Learning rate is reduced whenever the validation accuracy ceased to improve. The retrained models with the best test classification accuracy are stored for further evaluation. 
+
+### The Jupyter notebook modelA_training.ipynb illustrates the process.
 
 (b) Model B: The base models are trained and evaluated with the Shenzhen dataset collection, to categorize into TB-infected and normal classes. The models are evaluated through five-fold cross-validation to prevent overfitting and improve robustness and generalization. The retrained base models with the best model weights, giving the highest test classification accuracy for each cross-validated fold are stored for further evaluation.
 
+### The Jupyter notebook modelB_training.ipynb illustrates the process.
+
 (c) Model C: Retrained models from Model A with CXR domain-specific knowledge is fine-tuned on Shenzhen dataset collection to categorize into TB-infected and normal classes. Embedding domain-specific knowledge is expected to improve model adaption to the target task. The models are evaluated through five-fold cross-validation.  The retrained models showing the best performance for each cross-validated fold are stored for further evaluation. With multi-model knowledge transfer, Model C is expected to demonstrate improved TB detection performance as compared to Model B.
+
+### The Jupyter notebook modelC_training.ipynb illustrates the process.
 
 ## Ensemble learning:
 
 The predictive models from Model C are combined through majority voting, simple averaging, weighted averaging, and stacking to classify the CXRs into TB-infected and normal classes. We used a neural network as a meta-learner to learn from the predictions of the top-performing models from Model C. The layers in the base-learners are marked as not trainable so the weights are not updated when the stacking ensemble is trained. The outputs of the base-learners are concatenated. A hidden layer is defined to interpret these predictions to the meta-learner and an output layer to arrive at probabilistic predictions. 
+
+### The Jupyter notebook model_ensemble.ipynb illustrates the process.
 
 ## Performance metric evaluation:
 
