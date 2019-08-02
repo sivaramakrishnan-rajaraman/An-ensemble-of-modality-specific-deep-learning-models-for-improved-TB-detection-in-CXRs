@@ -1,8 +1,8 @@
-# Combination-of-multi-model-knowledge-transfer-and-ensemble-learning-toward-improved-TB-detection in chest radiographs
+# An ensemble of madality-specific deep learning models for improved-TB-detection in chest radiographs
 
 ## Aim:
 
-We propose a multi-model knowledge transfer strategy to explore the possibilities of building models that learn generic features from a large-scale collection of CXRs and repurposing them to detect TB-like manifestations. We propose model ensembles by combining multiple models, expecting that it would lead to predictions that are better than any individual, constituent model. We study the combined benefits of multi-model knowledge transfer and ensemble learning toward improved TB detection in chest radiographs. 
+We propose a modality-specific knowledge transfer strategy to explore the possibilities of building models that learn generic features from a large-scale collection of CXRs and repurposing them to detect TB-like manifestations. We propose model ensembles by combining multiple models, expecting that it would lead to predictions that are better than any individual, constituent model. We study the combined benefits of multi-model knowledge transfer and ensemble learning toward improved TB detection in chest radiographs. 
 
 ## Prerequisites:
 
@@ -21,6 +21,7 @@ The following publicly available CXR datasets are used in this study:
 Pediatric pneumonia dataset: The dataset includes anterior-posterior (AP) CXRs of children from 1 to 5 years of age, collected as a part of routine patient care, from Guangzhou Women and Children’s Medical Center in Guangzhou, China. It includes 1,583 pediatric normal CXRs and 4,273 radiographs infected with bacterial and viral pneumonia. The dataset is curated by expert radiologists and screened to remove low-quality, unreadable radiographs. 
 
 Radiological Society of North America (RSNA) pneumonia dataset: The dataset is hosted by the radiologists from RSNA and Society of Thoracic Radiology (STR) for the Kaggle pneumonia detection challenge toward predicting pneumonia in CXRs. It includes a total of 17833 abnormal and 8851 normal radiographs in DICOM format with a spatial resolution of 1024×1024 pixel dimensions and 8-bit depth.
+
 Indiana Dataset: The dataset includes 2,378 abnormal and 1726 normal, posterior-anterior (PA) chest radiographs, collected from hospitals affiliated with the Indiana University School of Medicine, and archived at the National Library of Medicine (NLM) (OHSRP# 5357). The collection is made publicly available through the OpenI® search engine developed by NLM. 
 
 Shenzhen Dataset: The dataset includes 336 TB-infected and 326 normal radiographs and the associated clinical readings, collected from the outpatient clinics of Shenzhen No.3 People’s Hospital, China. Table 1 shows the distribution of data across the train and test sets for the different dataset collections used in this study. 
@@ -33,7 +34,7 @@ The following preprocessing steps are applied in common to these datasets: (a) m
 
 The performance of the following CNNs are evaluated toward the task of detecting TB in CXRs: (a) customized CNN; (b) VGG-16; (c) Inception-V3; (d) InceptionResNet-V2; (e) Xception; and (f) DenseNet-121. 
 
-## Multi-model knowledge transfer:
+## Modality-specific knowledge transfer:
 
 The overall process is described herewith: 
 
