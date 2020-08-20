@@ -59,3 +59,9 @@ The predictive models from Model C are combined through majority voting, simple 
 ## Performance metric evaluation:
 
 The models in multi-model knowledge transfer and ensemble pipeline are evaluated in terms of the following performance metrics: (a) accuracy; (b) AUC; (c) mean squared error (MSE); (d) precision; (e) sensitivity; (f) specificity; (g) F-score; and (h) Matthews Correlation Coefficient (MCC). The models are trained and evaluated on a Windows system with Xeon CPU, 32GB RAM, NVIDIA 1080Ti GPU and CUDA/CUDNN for GPU acceleration. The models are configured in Python using Keras API with Tensorflow backend.
+
+## Citation:
+
+If you find these codes useful, kindly consider citing this publication: 
+
+### S. Rajaraman and S. K. Antani, "Modality-Specific Deep Learning Model Ensembles Toward Improving TB Detection in Chest Radiographs," in IEEE Access, vol. 8, pp. 27318-27326, 2020, doi: 10.1109/ACCESS.2020.2971257.
