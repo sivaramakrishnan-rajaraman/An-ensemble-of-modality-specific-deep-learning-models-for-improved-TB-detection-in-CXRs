@@ -1,4 +1,4 @@
-# An ensemble of madality-specific deep learning models for improved-TB-detection in chest radiographs
+# An ensemble of modality-specific deep learning models for improved-TB-detection in chest radiographs
 
 ## Aim:
 
